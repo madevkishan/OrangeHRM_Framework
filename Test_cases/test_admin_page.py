@@ -20,3 +20,22 @@ class Test_AdminPage:
 
         logs_obj.info("Clicking on Admin Menu Item")
         AdminPage_Actions_obj.click_admin_menu(driver=setup_browser)
+
+        logs_obj.info("Entering username")
+        AdminPage_Actions_obj.enter_username_admin()
+
+        logs_obj.info("Selecting from userrole")
+        AdminPage_Actions_obj.enter_userrole_dropdown_1()
+
+        logs_obj.info("Entering EmployeeName")
+        AdminPage_Actions_obj.enter_employeename()
+
+        logs_obj.info("Selecting from Status")
+        AdminPage_Actions_obj.status_dropdown()
+
+        logs_obj.info("Click on ADD Button")
+        AdminPage_Actions_obj.click_add_button()
+
+
+
+
