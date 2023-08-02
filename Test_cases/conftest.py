@@ -1,10 +1,10 @@
 import pytest
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
-from time import sleep
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.common.action_chains import ActionChains
+
 from Test_data import credentials
-from Test_locators.test_locators import orangehrm_LoginPageLocators
+from Test_locators.test_locators import LoginPage_Locators, AdminPage_Locators
 
 @pytest.fixture
 def setup_browser():

@@ -1,6 +1,6 @@
 # import logging
 # import pytest
-from PageObjects.login_page_POM import orangehrm_LoginPageActions
+from PageObjects.login_page_POM import LoginPage_Actions
 from Test_utilities.customLogger import logGen
 
 
@@ -12,19 +12,19 @@ class TestLoginTitle:
         """
         self.driver = setup_browser
         logs_obj = logGen.logger()
-        orangehrm_LoginPageActions_obj = orangehrm_LoginPageActions(driver=setup_browser)  # Create an instance of orangehrm_LoginPageActions class
+        LoginPage_Actions_obj = LoginPage_Actions(driver=setup_browser)  # Create an instance of orangehrm_LoginPageActions class
 
         # current_url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
         # expected_url = "https://opensource-demo.orangehrmlive.com/index.php/dashboard"
         logs_obj.info("Starting the Test")
 
         expected_title = 'orangehrm'
-        orangehrm_LoginPageActions_obj.login_to_orangehrm()  # Call the method on the instance
+        LoginPage_Actions_obj.login_to_orangehrm()  # Call the method on the instance
 
         # Check the title of the page
         # assert orangehrm_LoginPageActions_obj.title_of_page() == expected_url
 
-        current_page_title = orangehrm_LoginPageActions_obj.title_of_page()
+        current_page_title = LoginPage_Actions_obj.title_of_page()
         # # If the assertion fails, capture a screenshot
         # if orangehrm_LoginPageActions_obj.title_of_page() != expected_title:
         #     file_name = "screenshot_failed_assertion.png"
